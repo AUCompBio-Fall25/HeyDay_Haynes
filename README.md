@@ -1,12 +1,16 @@
 # HeyDay_Haynes
 
-## Motivation
-This script is a celebration of the annual tradition at Auburn of "Hey Day!" On this day each year, all students wear nametags around campus and greet each other with their names and a "War Eagle!"
+## What is Hey Day?
+For the annual tradition at Auburn of "Hey Day" all students and faculty wear nametags around campus and greet each other with their names and a "War Eagle!" It started by in 1947 as a way of welcoming back World War II soldiers, and continues today as a celebration of the Auburn family!
 
 Read more about this tradition here: [Hey Day Tradition](https://alumni.auburn.edu/2024/10/01/auburn-tradition-hey-day/)
 
-## Key pieces of code
-This code prompts the user to specify which college they are a student in using an if, then statement. The only valid inputs are those specified in the prompt.
+## What does this script do?
+This script works with input provided by the user to greet the user with Auburn spirit and ask about their Auburn experience. It prompts the user to answer which college they are a student in and which Auburn sport is their favorite. Using two txt files, the code can then output notable Auburn tigers that are associated with the user's academic college and their favorite Auburn sport. The code also provides each user with a random fun fact about Auburn!
+
+## Usage
+This code prompts the user to specify which college they are a student in using an if, then statement. The only valid inputs are those specified in the prompt. This format is also used to prompt the user to answer which Auburn sport is their favorite, and will only accept inputs specified in the prompt. If the user provides an input that is invalid, they will receive an error and will be prompted to provide a valid input.
+
 ```
 read -p "What college are you a student in? (Engineering, Business, Liberal Arts, Sciences, Agriculture, Education, 
 Veterinary Medicine):" college
@@ -19,7 +23,8 @@ n, Veterinary Medicine."
 fi
 ```
 
-This part of the script uses the variable previously set of which college the student is a part of at Auburn to give them the name of a notable Auburn person that was in their same college using grep to search for that pattern.
+This part of the script uses the variable previously set of which college the student is a part of at Auburn to give them the name of a notable Auburn person that was in their same college using grep to search for that pattern. This pattern is also used to give the student information about a notable Auburn tiger associated with their favorite Auburn sport. 
+
 ```
 echo "A Notable Auburn Tiger from the college of $college:"
 notable_tiger=$(grep -i "$college" auburn_notables.txt | head -1)
