@@ -25,3 +25,21 @@ echo "A Notable Auburn Tiger from the college of $college:"
 notable_tiger=$(grep -i "$college" auburn_notables.txt | head -1)
 echo "$notable_tiger"
 ```
+
+## Example Output
+```
+$ ./heyday.sh
+War Eagle and welcome! Please type your name:
+Aubie
+Hey Aubie! Welcome to the Loveliest Village on the Plains!
+What college are you a student in? (Engineering, Business, Liberal Arts, Sciences, Agriculture, Education, Veterinary Medicine):Sciences
+Woah tiger! You're in the college of Sciences!
+Okay tiger, tell me which sport you cheer the loudest for here on the Plains (Football, Basketball, Baseball, Gymnastics):Baseball
+War Damn! Sounds like you really bleed orange and blue for Baseball
+A Notable Auburn Tiger from the college of Sciences:
+Loretta Spencer|Sciences|Alumni|First African American Mayor of Huntsville, AL
+A notable Auburn Baseball legend is:
+Bo Jackson|Liberal Arts|Athlete-Football-Baseball|1985 Heisman Trophy winner, MLB All-Star
+The university's official colors, burnt orange and navy blue, were chosen in 1892 and inspired by a sunset over the plains.
+Hey Aubie! War Eagle! See you next time in the Loveliest Village on the Plains!
+```
